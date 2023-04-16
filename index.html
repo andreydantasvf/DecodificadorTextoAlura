@@ -16,7 +16,7 @@
   </header>
   <main>
     <div class="content-text">
-      <textarea placeholder="Digite seu texto"></textarea>
+      <textarea id="text" placeholder="Digite seu texto"></textarea>
 
       <div class="infos">
         <div class="important-text">
@@ -24,18 +24,27 @@
           <span>Apenas letras minúsculas e sem acento.</span>
         </div>
         <div class="buttons">
-          <button id="encrypt">Criptografar</button>
-          <button id="decrypt">Descriptografar</button>
+          <button id="encrypt" onclick="handleEncrypt()">Criptografar</button>
+          <button id="decrypt" onclick="handleDecrypt()">Descriptografar</button>
         </div>
       </div>
     </div>
 
     <div class="result-text">
-      <img src="assets/searchText.svg" alt="Boneco procurando um texto">
-      <p>Nenhuma mensagem encontrada</p>
-      <span>Digite um texto que você deseja criptografar ou descriptografar.</span>
+      <div class="empty-text">
+        <img src="assets/searchText.svg" alt="Boneco procurando um texto">
+        <p>Nenhuma mensagem encontrada</p>
+        <span>Digite um texto que você deseja criptografar ou descriptografar.</span>
+      </div>
+
+      <div class="result disabled">
+        <p id="resultText">teste</p>
+        <button onclick="handleCopyText()">Copiar</button>
+      </div>
     </div>
   </main>
+
+  <script src="./app.js"></script>
 </body>
 
 </html>

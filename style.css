@@ -27,6 +27,10 @@ main {
   gap: 8rem;
 }
 
+.disabled {
+  display: none !important;
+}
+
 .content-text {
   width: 100%;
   height: 100%;
@@ -92,6 +96,8 @@ main {
 }
 
 .result-text {
+  width: 100%;
+  max-width: 40rem;
   height: 100%;
   padding: 3.2rem;
   background-color: #fff;
@@ -108,7 +114,7 @@ main {
   word-break: keep-all;
 }
 
-.result-text p {
+.result-text .empty-text p {
   margin-top: 1.6rem;
   font-weight: 700;
   font-size: 2.4rem;
@@ -116,9 +122,36 @@ main {
   color: #343A40;
 }
 
-.result-text span {
+.result-text .empty-text span {
   color: #495057;
   line-height: 150%;
+}
+
+.result-text .result {
+  width: 100%;
+  height: 100% ;
+  font-size: 2.4rem;
+  line-height: 150%;
+  color: #495057;
+
+  word-break: keep-all;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-text .result button {
+  width: 100%;
+  max-width: 33.6rem;
+
+  padding: 2.4rem;
+
+  border: 1px solid #0A3871;
+  border-radius: 2.4rem;
+  color: #0A3871;
+  cursor: pointer;
 }
 
 @media (max-width: 720px) {
@@ -140,7 +173,7 @@ main {
     flex: 1;
   }
 
-  .result-text img {
+  .result-text .empty-text img {
     display: none;
   }
 }
