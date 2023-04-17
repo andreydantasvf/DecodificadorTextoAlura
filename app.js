@@ -2,7 +2,7 @@ function handleEncrypt() {
   const texto = document.getElementById('text').value.trim().toLowerCase();
 
   const encryptedText = texto.split("").map(letra => {
-    switch(letra) {
+    switch (letra) {
       case 'a': return 'ai';
       case 'e': return 'enter';
       case 'i': return 'imes';
@@ -18,13 +18,17 @@ function handleEncrypt() {
 function handleDecrypt() {
   const texto = document.getElementById('text').value.trim().toLowerCase();
 
-  let decryptedText = texto.replace('ai', 'a');
-  decryptedText = decryptedText.replace('enter', 'e');
-  decryptedText = decryptedText.replace('imes', 'i');
-  decryptedText = decryptedText.replace('ober', 'o');
-  decryptedText = decryptedText.replace('ufat', 'u');
+  const decryptedText = texto.split(" ").map(word => {
+    let decryptedWord = word.replace(/ai/g, 'a');
+    decryptedWord = decryptedWord.replace(/enter/g, 'e');
+    decryptedWord = decryptedWord.replace(/imes/g, 'i');
+    decryptedWord = decryptedWord.replace(/ober/g, 'o');
+    decryptedWord = decryptedWord.replace(/ufat/g, 'u');
 
-  showResultText(decryptedText);
+    return decryptedWord
+  });
+
+  showResultText(decryptedText.join(' '));
 }
 
 function handleCopyText() {
