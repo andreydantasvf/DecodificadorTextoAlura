@@ -4,7 +4,7 @@
 ## 🔖Preview
 <p>
 <img alt="Layout" src="./github/preview.png" width="600px" height="350px">
-	  <img alt="Layout" src=".github/previewMobile.png" width="200px" height="350px">
+	  <img alt="Layout" src="./github/previewMobile.png" width="200px" height="350px">
 	</p>
   
 ## 📜 Sobre
